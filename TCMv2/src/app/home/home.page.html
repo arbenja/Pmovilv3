@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">LogIn</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background"></ion-content>
+
+
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">LogIn</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <h1>Iniciar sesión</h1>
+    
+    <form (submit)="login()">
+      <ion-item>
+        <ion-input [(ngModel)]="username" name="username" label="Nombre de usuario" labelPlacement="floating" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="password" name="password" type="password" label="Contraseña" labelPlacement="floating" required ></ion-input>
+      </ion-item>
+      <ion-button type="submit" >Iniciar sesión</ion-button>
+    </form>
+    <h4>o</h4>
+    <a routerLink="/registro">Crear cuenta</a>
+  </div>
+
+

@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Crear Post</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Título</ion-label>
+    <ion-input [(ngModel)]="title" placeholder="Ingresa el título"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">Contenido</ion-label>
+    <ion-textarea [(ngModel)]="body" placeholder="Escribe el contenido"></ion-textarea>
+  </ion-item>
+  
+  <div class="ion-padding">
+    <ion-button expand="block" (click)="createPost()">Crear Post</ion-button>
+  </div>
+</ion-content>
