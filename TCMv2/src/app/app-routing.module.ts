@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'notfound',
     loadChildren: () => import('./notfound/notfound.module').then( m => m.NotfoundPageModule)
   },
+  {
+    path: 'scan',
+    loadChildren: () => import('./scan/scan.module').then( m => m.ScanPageModule)
+  },
 ];
 
 @NgModule({

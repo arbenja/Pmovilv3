@@ -14,6 +14,16 @@
     </ion-card-header>
   </ion-card>
 
+  <ion-card>
+    <ion-text color="primary">
+      <h1>Generar QR</h1>
+    </ion-text>
+    <br><br>
+    <ion-button (click)="mostrarQr()">Mostrar QR</ion-button>
+
+    <qrcode *ngIf="mostrarQR" [qrdata]="texto" [width]="300"></qrcode>
+  </ion-card>
+
   <ion-card *ngFor="let post of posts">
     <ion-card-header><ion-card-title>{{ post.title }}</ion-card-title></ion-card-header>
     <ion-card-content>{{ post.body }}</ion-card-content>
@@ -24,8 +34,11 @@
 
 <ion-footer>
   <ion-toolbar>
-    <ion-button shape="round" routerLink="/create"><ion-icon name="add-circle"></ion-icon></ion-button>
-    <ion-button (click)="logout()" slot="end" shape="round"><ion-icon name="exit"></ion-icon></ion-button>
+    <ion-button shape="round" routerLink="/create"><ion-icon name="add-circle">      </ion-icon></ion-button>
+    <ion-title>
+      <ion-button shape="round" routerLink="/scan"><ion-icon name="scan-circle-outline"></ion-icon></ion-button>
+    </ion-title>
+    <ion-button color="danger" (click)="logout()" slot="end" shape="round">           <ion-icon name="exit"></ion-icon></ion-button>
   </ion-toolbar>
 </ion-footer>
 

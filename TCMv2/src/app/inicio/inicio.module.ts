@@ -8,8 +8,11 @@ import { InicioPageRoutingModule } from './inicio-routing.module';
 
 import { InicioPage } from './inicio.page';
 
+import { QRCodeModule } from 'angularx-qrcode';
+
 @NgModule({
   imports: [
+    QRCodeModule,  // Add this module to your imports.
     CommonModule,
     FormsModule,
     IonicModule,

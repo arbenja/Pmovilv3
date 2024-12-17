@@ -6,12 +6,16 @@ import { AuthService } from '../services/auths/auth.service';
 import { CanComponentDeactivate } from '../guards/candeactivate.guard';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.page.html',
   styleUrls: ['./inicio.page.scss'],
 })
 export class InicioPage implements OnInit, CanComponentDeactivate {
+  texto:any = 'https://www.duoc.cl/';
+  mostrarQR: boolean = false;
+
   posts: any[] = [];
   username: string = '';
   nombre: string = '';
@@ -76,5 +80,8 @@ export class InicioPage implements OnInit, CanComponentDeactivate {
     }
   }
 
+  mostrarQr() {
+    this.mostrarQR = !this.mostrarQR;
+  }
 
 }
